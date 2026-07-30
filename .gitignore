@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+results_backup_*/
+demo/captures/
+demo/results/
+*.log
+/tmp/

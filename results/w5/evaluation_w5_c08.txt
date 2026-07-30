@@ -1,0 +1,26 @@
+=== Evaluation Report ===
+
+Total windows evaluated: 10509
+  Ground-truth attack windows : 309
+  Ground-truth normal windows  : 10200
+
+Detection rate (recall)      : 17.2%  (95% CI: 13.4%-21.8%, n=309)
+False positive rate          : 0.1%  (95% CI: 0.0%-0.1%, n=10200)
+Precision                    : 88.3%
+
+--- Time-to-detect per tool ---
+  tshark       | NOT DETECTED during its active window
+  ettercap     | first flagged after    1.5s | 19.3% of windows during this attack flagged
+  bettercap    | first flagged after    1.5s | 39.2% of windows during this attack flagged
+  tcpdump_passive | NOT DETECTED during its active window
+  bettercap_slow | first flagged after    4.5s | 29.6% of windows during this attack flagged
+  ettercap_slow | first flagged after    4.5s | 11.8% of windows during this attack flagged
+
+--- Per-device breakdown ---
+(Tests whether flags attribute to the specific device, or whether ALL devices
+ look anomalous once ARP poisoning starts on the segment -- a real question for
+ a per-device fingerprinting design, not just extra detail.)
+  08:00:27:5a:87:bc    | recall during attacks: 48.5%    (n=103) | FPR during normal: 0.1%     (n=3400)
+  08:00:27:8a:0d:75    | recall during attacks: 1.9%     (n=103) | FPR during normal: 0.1%     (n=3400)
+  08:00:27:a5:9e:2d    | recall during attacks: 1.0%     (n=103) | FPR during normal: 0.0%     (n=3400)
+

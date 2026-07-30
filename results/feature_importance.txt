@@ -1,0 +1,18 @@
+=== Feature Importance (permutation, AUC-drop) ===
+
+Baseline AUC (attack vs normal, using model's raw anomaly score): 0.9082
+
+Higher 'AUC drop' = shuffling this feature hurts detection more = feature matters more.
+
+feature                    AUC drop (mean)       std
+mean_iat                            0.0068    0.0022
+arp_reply_rate                      0.0063    0.0019
+arp_reply_count                     0.0053    0.0016
+arp_req_count                       0.0038    0.0008
+arp_req_rate                        0.0036    0.0015
+broadcast_ratio                     0.0025    0.0010
+pkt_count                           0.0024    0.0028
+std_iat                             0.0010    0.0029
+byte_count                          0.0008    0.0033
+avg_response_latency                0.0006    0.0016
+send_recv_ratio                     0.0001    0.0032
