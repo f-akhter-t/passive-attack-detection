@@ -6,3 +6,7 @@ demo/captures/
 demo/results/
 *.log
 /tmp/
+*.pcap
+*.pcapng
+*.joblib
+backups/
